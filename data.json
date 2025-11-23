@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "u_1763857052220_9628db94",
+      "nickname": "SandyADM",
+      "email": "sandicernilkin@gmail.com",
+      "passwordHash": "bd60db2508378609d19f7db08494d807efa2bb385ddc2338486f3405aff20ff4",
+      "role": "admin",
+      "verified": true
+    },
+    {
+      "id": "u_1763866488840_67cdbdc9",
+      "nickname": "SandyNoADM",
+      "email": "sandyboiwork@gmail.com",
+      "passwordHash": "bd60db2508378609d19f7db08494d807efa2bb385ddc2338486f3405aff20ff4",
+      "role": "user",
+      "verified": true
+    }
+  ],
+  "posts": [
+    {
+      "id": "p_1763859652889_66a144b1",
+      "title": "ААААААААААААА",
+      "content": "БЭКЭНД НАКОНЕЦ ГОТОВ!",
+      "author": "SandyADM",
+      "authorRole": "admin",
+      "createdAt": "2025-11-23T01:00:52.889Z",
+      "comments": [
+        {
+          "id": "c_1763866521415_63958ac5",
+          "author": "SandyNoADM",
+          "authorRole": "user",
+          "content": "Тест учётки без админки",
+          "createdAt": "2025-11-23T02:55:21.415Z"
+        }
+      ]
+    }
+  ],
+  "pending": []
+}

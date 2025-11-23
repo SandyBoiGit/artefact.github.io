@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Сервер Путеводный Артефакт — Главная</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body data-page="home">
+  <header class="topbar">
+    <button class="menu-toggle" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="logo">Путеводный Артефакт</div>
+    <nav class="side-menu" aria-label="Главное меню">
+      <div class="side-menu__header">
+        <span class="side-menu__title">Меню</span>
+        <button class="side-menu__close" aria-label="Закрыть меню">×</button>
+      </div>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="blog.html">Блог</a></li>
+        <li><a href="server.html">Присоединиться!</a></li>
+      </ul>
+    </nav>
+    <div class="topbar__overlay"></div>
+  </header>
+
+  <main class="page page--home">
+    <section class="hero">
+      <div class="hero__content">
+        <h1>Сервер Путеводный Артефакт</h1>
+        <p class="hero__subtitle">Сервер Путеводный Артефакт это бесплатный сервер Minecraft где каждый новый сезон это новое приключение.</p>
+        <a href="server.html" class="btn btn--primary">Подключиться к серверу</a>
+      </div>
+    </section>
+
+    <section class="section section--light">
+      <div class="container two-column">
+        <div>
+          <h2>О сервере</h2>
+          <p>
+            Путеводный Артефакт — это сезонный сервер, где каждая «глава» проекта строится вокруг отдельной
+            идеи. На старте сезона мы вручную собираем авторскую сборку модов под конкретную тему: выживание
+            в суровом мире, магические эксперименты, индустриальные империи или что‑то совсем неожиданное.
+          </p>
+          <p>
+            Все сезоны и сборки доступны бесплатно: никаких платных проходок, доната и уж тем более
+            «pay‑to‑win». Вход на сервер и прогресс зависят только от вашего времени, навыков и желания
+            исследовать мир, а не от кошелька. Наша цель — честный, интересный и атмосферный кооперативный
+            опыт.
+          </p>
+        </div>
+        <div>
+          <h2>Кто работает над проектом</h2>
+          <div class="card-list">
+            <article class="card person-card">
+              <h3>Основатель</h3>
+              <p>
+                Sandy или же Мэт, Основатель проекта и на данный момент главный разработчик.
+              </p>
+            </article>
+            <article class="card person-card">
+              <h3>Администратор/Второй глава</h3>
+              <p>
+                Tundra он же Данил, Второй глава и второстепенный разработчик
+              </p>
+            </article>
+            <article class="card person-card">
+              <h3>Модератор/Сценарист</h3>
+              <p>
+                Кэп иль Тигран зовите как хотите, Модерация чата и пытается написать сюжет(не выходит)
+              </p>
+            </article>
+            <article class="card person-card">
+              <h3>Строители</h3>
+              <p>
+                Тарникс и Вальфангер, Строители сервера, а так же часто помогают в тестировании сборки
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Чем отличается Путеводный Артефакт?</h2>
+        <div class="features">
+          <article class="feature">
+            <h3>Стабильный хост</h3>
+            <p>Сервер хостится на minecraft-hosting.net<br>
+              (не реклама но могла быть ей)</p>
+          </article>
+          <article class="feature">
+            <h3>Честная игра</h3>
+            <p>Отсутствие pay-to-win и приоритет честного и равного игрового опыта для всех.</p>
+          </article>
+          <article class="feature">
+            <h3>Свой концепт</h3>
+            <p>Мы самостоятельно подбираем моды и настройки для интересного и стабильного времяпрепровождения.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>Сервер Путеводный Артефакт © <span id="year"></span></span>
+      <a href="blog.html" class="footer__link">Перейти в блог проекта</a>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

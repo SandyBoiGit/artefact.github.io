@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Сервер Путеводный Артефакт — Блог</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body data-page="blog">
+  <header class="topbar">
+    <button class="menu-toggle" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="logo">Путеводный Артефакт</div>
+    <nav class="side-menu" aria-label="Главное меню">
+      <div class="side-menu__header">
+        <span class="side-menu__title">Меню</span>
+        <button class="side-menu__close" aria-label="Закрыть меню">×</button>
+      </div>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="blog.html">Блог</a></li>
+        <li><a href="server.html">Присоединиться!</a></li>
+      </ul>
+    </nav>
+    <div class="topbar__overlay"></div>
+  </header>
+
+  <main class="page page--blog">
+    <section class="section">
+      <div class="container blog-layout">
+        <aside class="auth-panel">
+          <h2>Учётная запись</h2>
+          <p class="auth-panel__status">Статус: <span id="auth-status">Не вошли</span></p>
+
+          <div class="auth-tabs">
+            <button type="button" class="auth-tabs__btn auth-tabs__btn--active" data-tab="login">Вход</button>
+            <button type="button" class="auth-tabs__btn" data-tab="register">Регистрация</button>
+          </div>
+
+          <form id="login-form" class="auth-form" autocomplete="off">
+            <label class="field">
+              <span>Электронная почта</span>
+              <input type="email" name="email" required placeholder="you@example.com" />
+            </label>
+            <label class="field">
+              <span>Пароль</span>
+              <input type="password" name="password" required minlength="6" />
+            </label>
+            <button type="submit" class="btn btn--primary btn--full">Войти</button>
+            <p class="text-muted small">Комментировать посты могут только зарегистрированные и подтверждённые аккаунты.</p>
+          </form>
+
+          <form id="register-form" class="auth-form hidden" autocomplete="off">
+            <label class="field">
+              <span>Ник</span>
+              <input type="text" name="nickname" required minlength="3" maxlength="24" placeholder="Ваш ник на сервере" />
+            </label>
+            <label class="field">
+              <span>Электронная почта</span>
+              <input type="email" name="email" required placeholder="you@example.com" />
+            </label>
+            <label class="field">
+              <span>Пароль</span>
+              <input type="password" name="password" required minlength="6" placeholder="Минимум 6 символов" />
+            </label>
+            <button type="submit" class="btn btn--primary btn--full">Зарегистрироваться</button>
+            <p class="text-muted small">После регистрации мы отправим код подтверждения на указанную почту.</p>
+          </form>
+
+          <form id="verify-form" class="auth-form hidden" autocomplete="off">
+            <p class="text-muted">На вашу почту отправлен код подтверждения. Введите его ниже, чтобы активировать аккаунт.</p>
+            <label class="field">
+              <span>Код подтверждения</span>
+              <input type="text" name="code" required maxlength="6" minlength="4" placeholder="Например, 123456" />
+            </label>
+            <button type="submit" class="btn btn--primary btn--full">Подтвердить аккаунт</button>
+            <p class="text-muted small">Если вы закрыли страницу — просто войдите снова, код будет сгенерирован заново.</p>
+          </form>
+
+          <div id="user-panel" class="user-panel hidden">
+            <p><strong>Вы вошли как:</strong> <span id="current-user"></span></p>
+            <p><strong>Почта:</strong> <span id="current-email"></span></p>
+            <p><strong>Роль:</strong> <span id="current-role"></span></p>
+            <button id="logout-btn" class="btn btn--outline btn--full">Выйти</button>
+          </div>
+        </aside>
+
+        <section class="blog-main">
+          <header class="blog-header">
+            <h1>Блог проекта Путеводный Артефакт</h1>
+            <p>Новости сервера, технические обновления и заметки от команды.</p>
+          </header>
+
+          <section id="post-editor" class="card card--editor hidden">
+            <h2>Новый пост</h2>
+            <p class="text-muted">Посты может создавать только административная учётная запись.</p>
+            <form id="new-post-form" class="vertical-form">
+              <label class="field">
+                <span>Заголовок</span>
+                <input type="text" name="title" required maxlength="120" />
+              </label>
+              <label class="field">
+                <span>Содержимое</span>
+                <textarea name="content" required rows="5" maxlength="4000"></textarea>
+              </label>
+              <button type="submit" class="btn btn--primary">Опубликовать пост</button>
+            </form>
+          </section>
+
+          <section class="posts" id="posts"></section>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>Сервер Путеводный Артефакт © <span id="year"></span></span>
+      <a href="server.html" class="footer__link">Посмотреть данные сервера</a>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

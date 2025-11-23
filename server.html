@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Сервер Путеводный Артефакт — Данные сервера</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body data-page="server">
+  <header class="topbar">
+    <button class="menu-toggle" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="logo">Путеводный Артефакт</div>
+    <nav class="side-menu" aria-label="Главное меню">
+      <div class="side-menu__header">
+        <span class="side-menu__title">Меню</span>
+        <button class="side-menu__close" aria-label="Закрыть меню">×</button>
+      </div>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="blog.html">Блог</a></li>
+        <li><a href="server.html">Данные сервера</a></li>
+      </ul>
+    </nav>
+    <div class="topbar__overlay"></div>
+  </header>
+
+  <main class="page page--server">
+    <section class="hero hero--compact">
+      <div class="hero__content">
+        <h1>Данные сервера Путеводный Артефакт</h1>
+        <p class="hero__subtitle">Все важные ссылки и техническая информация о проекте.</p>
+      </div>
+    </section>
+
+    <section class="section section--light">
+      <div class="container two-column">
+        <div>
+          <h2>Основная информация</h2>
+          <dl class="data-list">
+            <div class="data-list__item">
+              <dt>IP / Адрес подключения</dt>
+              <dd><code>artefactoftravels.ru</code></dd>
+            </div>
+            <div class="data-list__item">
+              <dt>Версия клиента</dt>
+              <dd>1.21.1(Тестовое значение, будет заменено)</dd>
+            </div>
+            <div class="data-list__item">
+              <dt>Формат</dt>
+              <dd>Выживание но при некоторых Событиях может меняться</dd>
+            </div>
+            <div class="data-list__item">
+              <dt>Локация хостинга</dt>
+              <dd>РФ</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div>
+          <h2>Полезные ссылки</h2>
+          <ul class="link-list">
+            <li>
+              <span>Discord-сервер</span>
+              <a href="https://discord.gg/quu69j5sk7" target="_blank" rel="noopener" class="btn btn--outline btn--small">
+                Перейти в Discord
+              </a>
+            </li>
+            <li>
+              <span>Сборка клиента</span>
+              <a href="#" class="btn btn--outline btn--small">Скачать сборку(Пока не действует ведь сборки нет)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Технические особенности</h2>
+        <div class="features">
+          <article class="feature">
+            <h3>Оптимизированная сборка</h3>
+            <p>Подобранные плагины и моды, минимизирующие лаги и повышающие стабильность.</p>
+          </article>
+          <article class="feature">
+            <h3>Регулярные бэкапы</h3>
+            <p>Автоматические резервные копии мира и конфигураций для защиты прогресса игроков.</p>
+          </article>
+          <article class="feature">
+            <h3>Античит и защита</h3>
+            <p>ВСЕВИДЯЩИЙ КЭП.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>Сервер Путеводный Артефакт © <span id="year"></span></span>
+      <a href="blog.html" class="footer__link">Новости и обновления в блоге</a>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
